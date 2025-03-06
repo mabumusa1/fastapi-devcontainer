@@ -1,0 +1,9 @@
+{
+	"name": "FE",
+	"dockerComposeFile": ["../../docker-compose.yml"],
+	"service": "fe",
+	"workspaceFolder": "/workspace/fe",
+    "forwardPorts": [5173],
+	"customizations": {
+	}
+}

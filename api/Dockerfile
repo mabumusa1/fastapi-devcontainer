@@ -13,7 +13,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && echo $TZ > /etc/timezone
 
 # Install any required packages
 RUN apt-get update && export DEBIAN_FRONTEND=noninteractive \
-   && apt-get -y install --no-install-recommends curl unzip
+    && apt-get -y install --no-install-recommends curl unzip
 
 # global installs to go into a different folder that the vscode user can write to.
 ENV PIP_TARGET=/usr/local/pip-global
@@ -29,5 +29,10 @@ ENV DEBIAN_FRONTEND=dialog
 ENV SHELL=/bin/bash
 # Real time logging
 ENV PYTHONUNBUFFERED=1
+
+
+COPY requirements.txt /tmp/pip-tmp/
+RUN pip3 --disable-pip-version-check --no-cache-dir install -r /tmp/pip-tmp/requirements.txt \
+    && rm -rf /tmp/pip-tmp
 
 USER vscode

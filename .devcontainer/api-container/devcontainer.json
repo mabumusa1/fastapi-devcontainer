@@ -1,11 +1,10 @@
 {
-	"name": "FastAPI",
-	"dockerComposeFile": "docker-compose.yml",
-	"service": "app",
-	"workspaceFolder": "/workspace",
+	"name": "API",
+	"dockerComposeFile": ["../../docker-compose.yml"],
+	"service": "api",
+	"workspaceFolder": "/workspace/api",
 	"remoteUser": "vscode",
     "forwardPorts": [8000],
-	"postCreateCommand": "pip install -r requirements.txt",
 	"customizations": {
 		"vscode": {
 			"settings": {
@@ -28,7 +27,6 @@
 				"dbaeumer.vscode-eslint",
 				"esbenp.prettier-vscode",
 				"ms-azuretools.vscode-docker",
-				"eamodio.gitlens",
 				"njpwerner.autodocstring",
 				"visualstudioexptteam.vscodeintellicode",
 				"coenraads.bracket-pair-colorizer-2",

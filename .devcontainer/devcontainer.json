@@ -1,0 +1,40 @@
+{
+	"name": "FastAPI",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	"remoteUser": "vscode",
+    "forwardPorts": [8000],
+	"postCreateCommand": "pip install -r requirements.txt",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"terminal.integrated.shell.linux": "/bin/bash",
+				"python.defaultInterpreterPath": "/usr/local/bin/python",
+				"editor.formatOnSave": true,
+				"files.autoSave": "afterDelay",
+				"files.autoSaveDelay": 1000,
+				"editor.wordWrap": "on",
+				"editor.tabSize": 4,
+				"editor.renderWhitespace": "all",
+				"editor.minimap.enabled": true,
+				"python.linting.enabled": true,
+				"python.linting.pylintEnabled": true,
+				"terminal.integrated.enabled": true
+			},
+			"extensions": [
+				"ms-python.python",
+				"ms-python.vscode-pylance",
+				"dbaeumer.vscode-eslint",
+				"esbenp.prettier-vscode",
+				"ms-azuretools.vscode-docker",
+				"eamodio.gitlens",
+				"njpwerner.autodocstring",
+				"visualstudioexptteam.vscodeintellicode",
+				"coenraads.bracket-pair-colorizer-2",
+				"christian-kohler.path-intellisense",
+				"humao.rest-client"
+			]
+		}
+	}
+}
